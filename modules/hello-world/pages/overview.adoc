@@ -2,18 +2,20 @@
 
 == Getting the SDK
 
-Eventually the SDK will be published to npm, but in the interim a select set of packages with prebuilt binaries are available on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[Github Releases page].  If a packages is not available for your specific platform, see the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[Github Building page] for details on how to build the SDK's binary.
+Eventually the SDK will be published to npm, but in the interim a select set of packages with prebuilt binaries are available on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page].
+If a packages is not available for your specific platform,
+see the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
 
-To install the SDK from a wheel on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[Github Releases page]:
+To install the SDK from a wheel on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page]:
 
-* Download the appropriate package
-* Unzip the downloaded file
-* Install via npm: `npm install <path to unzipped wheel>`
+. Download the appropriate package
+. Unzip the downloaded file
+. Install via npm: `npm install <path to unzipped wheel>`
 
 If a compatible package is not available, the SDK's binary will need to be built from source:
 
-* Follow the steps on the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[Github Building page]
-* After the build succeeds, the SDK can be used by running Node scripts from within the cloned repository or the SDK can be installed via pip: `npm install <path to cloned repository>`
+* Follow the steps on the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page].
+* After the build succeeds, the SDK can be used by running Node scripts from within the cloned repository -- or the SDK can be installed via pip: `npm install <path to cloned repository>`.
 
 
 == Connecting and Executing a Query
@@ -76,7 +78,6 @@ main()
     console.log('Exiting app...')
     process.exit(1)
   })
-
 ----
 
 === ES Modules
@@ -137,5 +138,4 @@ main()
     console.log("Exiting app...")
     process.exit(1)
   })
-
 ----
