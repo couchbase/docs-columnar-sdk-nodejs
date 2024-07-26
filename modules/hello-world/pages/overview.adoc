@@ -6,7 +6,7 @@ Eventually the SDK will be published to npm, but in the interim a select set of 
 If a packages is not available for your specific platform,
 see the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
 
-To install the SDK from a wheel on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page]:
+To install the SDK from a package on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page]:
 
 . Download the appropriate package
 . Unzip the downloaded file
