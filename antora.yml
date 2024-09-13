@@ -13,7 +13,7 @@ asciidoc:
     sdk_dot_minor: '1.0'
     sdk_dot_major: '1.x'
     version-server: '7.6'
-    version-common: '7.6'
+    version-common: '1.0'
     name_platform: 'Node.js'
     name-sdk: 'Node.js Columnar SDK'
     sdk_api: '1.0'
