@@ -1,7 +1,12 @@
 = Hello Columnar -- Java SDK
+:description: Install, connect, try. A quick start guide to get you up and running with Couchbase and the {name-sdk}.
 
-IMPORTANT: This page covers the pre-relase columnar SDK, for the internal preview, and remains applicable (internally) until the SDKs GA in October.
-The other pages appearing in the left-hand nav are part of docs development towards GA, and may not be accurate until GA.
+[abstract]
+{description}
+
+
+
+
 
 == Before You Start
 
@@ -57,66 +62,11 @@ implementation 'com.couchbase.client:couchbase-columnar-java-client:{sdk_current
 
 
 [maven-project-template]
-== Maven Project Template
+=== Maven Project Template
 
 The SDK's source code repository includes an https://github.com/couchbase/couchbase-jvm-clients/tree/master/columnar-java-client/examples[example Maven project] you can copy to get started quickly.
 
 
-[snapshots]
-== Using a Snapshot Version
-
-Couchbase publishes pre-release snapshot artifacts to the Sonatype OSS Snapshot Repository.
-If you wish to use a snapshot version, you'll need to tell your build tool about this repository.
-
-[{tabs}]
-====
-Maven::
-+
---
-.`*pom.xml*`
-[source,xml]
-----
-<repositories>
-  <repository>
-    <id>sonatype-snapshots</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    <releases><enabled>false</enabled></releases>
-    <snapshots><enabled>true</enabled></snapshots>
-  </repository>
-</repositories>
-----
---
-Gradle (Kotlin)::
-+
---
-.`*build.gradle.kts*`
-[source,kotlin]
-----
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots")
-        mavenContent { snapshotsOnly() }
-    }
-}
-----
---
-Gradle (Groovy)::
-+
---
-.`*build.gradle*`
-[source,groovy]
-----
-repositories {
-    mavenCentral()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-        mavenContent { snapshotsOnly() }
-    }
-}
-----
---
-====
 
 [quickstart]
 == Connecting and Executing a Query

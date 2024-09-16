@@ -1,7 +1,14 @@
-= Hello Columnar -- Java SDK
+= Full Installation
+:description: Installation instructions for the {name-sdk}.
+:page-partial:
 
-IMPORTANT: This page covers the pre-relase columnar SDK, for the internal preview, and remains applicable (internally) until the SDKs GA in October.
-The other pages appearing in the left-hand nav are part of docs development towards GA, and may not be accurate until GA.
+
+[abstract]
+{description}
+
+
+
+
 
 == Before You Start
 
@@ -10,11 +17,13 @@ We recommend using the most recent long-term support (LTS) version of OpenJDK.
 
 TIP: Remember to keep your Java installation up to date with the latest patches.
 
+
 == Getting the SDK
+
 
 Couchbase publishes all stable artifacts to https://central.sonatype.com/namespace/com.couchbase.client[Maven Central].
 
-Use your favorite dependency management tool to include the SDK in your project.
+Use your favorite dependency management tool to include the SDK in your project:
 
 [{tabs}]
 ====
@@ -57,7 +66,7 @@ implementation 'com.couchbase.client:couchbase-columnar-java-client:{sdk_current
 
 
 [maven-project-template]
-== Maven Project Template
+=== Maven Project Template
 
 The SDK's source code repository includes an https://github.com/couchbase/couchbase-jvm-clients/tree/master/columnar-java-client/examples[example Maven project] you can copy to get started quickly.
 
@@ -117,60 +126,3 @@ repositories {
 ----
 --
 ====
-
-[quickstart]
-== Connecting and Executing a Query
-
-[source,java]
-----
-import com.couchbase.columnar.client.java.Cluster;
-import com.couchbase.columnar.client.java.Credential;
-import com.couchbase.columnar.client.java.QueryResult;
-import com.couchbase.columnar.client.java.internal.Certificates;
-
-import java.util.List;
-
-public class Example {
-  public static void main(String[] args) {
-    var connectionString = "couchbases://...";
-    var username = "...";
-    var password = "...";
-
-    try (Cluster cluster = Cluster.newInstance(
-      connectionString,
-      Credential.of(username, password),
-      clusterOptions -> clusterOptions
-        // Configure a secure connection to a Couchbase internal pre-production cluster.
-        // (Omit this when connecting to a production cluster!)
-        .security(it -> it.trustOnlyCertificates(Certificates.getNonProdCertificates()))
-    )) {
-
-      // Execute a query and buffer all result rows in client memory.
-      QueryResult result = cluster.executeQuery("select 1");
-      result.rows().forEach(row -> System.out.println("Got row: " + row));
-
-      // Execute a query and process rows as they arrive from server.
-      cluster.executeStreamingQuery(
-          "select 1",
-          row -> System.out.println("Got row: " + row)
-      );
-
-      // Execute a streaming query with positional arguments.
-      cluster.executeStreamingQuery(
-        "select ?=1",
-        row -> System.out.println("Got row: " + row),
-        options -> options
-          .parameters(List.of(1))
-      );
-
-      // Execute a streaming query with named arguments.
-      cluster.executeStreamingQuery(
-        "select $foo=1",
-        row -> System.out.println("Got row: " + row),
-        options -> options
-          .parameters(Map.of("foo", 1))
-      );
-    }
-  }
-}
-----

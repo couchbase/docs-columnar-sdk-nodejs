@@ -1,0 +1,91 @@
+= Compatibility
+:description: Platform compatibility, and features available in different SDK versions, and compatibility between Server and SDK. \
+Plus notes on Cloud, networks, and AWS Lambda.
+:page-aliases: ROOT:overview,ROOT:compatibility-versions-features,compatibility-versions-features
+:page-toclevels: 3
+:table-caption!:
+
+
+[abstract]
+{description}
+
+
+The {sdk_dot_minor} {name-sdk} requires Java 17 or later to be installed.
+We recommend using the most recent long-term support (LTS) version of OpenJDK.
+
+TIP: Remember to keep your Java installation up to date with the latest patches.
+
+
+== Platform Compatibility
+
+
+=== JDK Version Compatibility
+
+include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=jdk-version]
+
+
+
+
+
+=== OS Compatibility
+
+include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=os-compat-jvm]
+
+
+
+
+
+=== Network Requirements
+
+include::{sdk_api}@columnar-sdk:shared:partial$network-requirements.adoc[tag=lan-like]
+
+
+
+
+
+
+== Capella Columnar Compatibility
+
+
+Capella Columnar is a fully hosted service, continually updated, and offering the latest version --
+with users having a few weeks to upgrade from the previous version.
+As such, the latest Couchbase Columnar SDKs are tested against the latest versions.
+Where older versions of the {name-sdk) pre-date significant new features in Columar, those differences will be noted in this section.
+
+
+To make development easier, the SDK includes the Capella client certificate ready installed.
+
+
+
+
+
+
+////
+=== API Version
+
+include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=api-version]
+////
+
+
+
+== SDK API Stability
+
+
+=== Interface Stability
+
+include::{version-common}@sdk:shared:partial$interface-stability-pars.adoc[tag=interface-stability-section]
+
+
+
+
+
+////
+=== Older SDK Versions
+
+include::{version-common}@sdk:shared:partial$archive.adoc[tag=link]
+////
+
+////
+Note the https://www.couchbase.com/support-policy[End of Life dates^] for {name-sdk} versions.
+See the notes there for Support details.
+////
