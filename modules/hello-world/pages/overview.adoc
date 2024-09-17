@@ -1,176 +1,141 @@
-= Hello Columnar -- Java SDK
-
-IMPORTANT: This page covers the pre-relase columnar SDK, for the internal preview, and remains applicable (internally) until the SDKs GA in October.
-The other pages appearing in the left-hand nav are part of docs development towards GA, and may not be accurate until GA.
-
-== Before You Start
-
-You will need Java 17 or later.
-We recommend using the most recent long-term support (LTS) version of OpenJDK.
-
-TIP: Remember to keep your Java installation up to date with the latest patches.
+= Hello Columnar -- Node.js Columnar SDK
 
 == Getting the SDK
 
-Couchbase publishes all stable artifacts to https://central.sonatype.com/namespace/com.couchbase.client[Maven Central].
+Eventually the SDK will be published to npm, but in the interim a select set of packages with prebuilt binaries are available on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page].
+If a packages is not available for your specific platform,
+see the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
 
-Use your favorite dependency management tool to include the SDK in your project.
+To install the SDK from a package on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page]:
 
-[{tabs}]
-====
-Maven::
-+
---
-For https://maven.apache.org[Maven], add this to the `dependencies` section of your project's `pom.xml` file:
+. Download the appropriate package
+. Unzip the downloaded file
+. Install via npm: `npm install <path to unzipped wheel>`
 
-[source,xml,subs="attributes+"]
-----
-<dependency>
-    <groupId>com.couchbase.client</groupId>
-    <artifactId>couchbase-columnar-java-client</artifactId>
-    <version>{sdk_current_version}</version>
-</dependency>
-----
-Refer to the https://maven.apache.org/guides/introduction/introduction-to-the-pom.html/[Maven Documentation] for more information regarding the structure of the `pom.xml` file.
---
-Gradle (Kotlin)::
-+
---
-For a https://gradle.org/[Gradle] script written in Kotlin, add this line to the `dependencies` section of your project's `build.gradle.kts` file:
+If a compatible package is not available, the SDK's binary will need to be built from source:
 
-[source,kotlin,subs="attributes+"]
-----
-implementation("com.couchbase.client:couchbase-columnar-java-client:{sdk_current_version}")
-----
---
-Gradle (Groovy)::
-+
---
-For a https://gradle.org/[Gradle] script written in Groovy, add this line to the `dependencies` section of your project's `build.gradle` file:
-
-[source,groovy,subs="attributes+"]
-----
-implementation 'com.couchbase.client:couchbase-columnar-java-client:{sdk_current_version}'
-----
---
-====
+* Follow the steps on the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page].
+* After the build succeeds, the SDK can be used by running Node scripts from within the cloned repository -- or the SDK can be installed via pip: `npm install <path to cloned repository>`.
 
 
-[maven-project-template]
-== Maven Project Template
-
-The SDK's source code repository includes an https://github.com/couchbase/couchbase-jvm-clients/tree/master/columnar-java-client/examples[example Maven project] you can copy to get started quickly.
-
-
-[snapshots]
-== Using a Snapshot Version
-
-Couchbase publishes pre-release snapshot artifacts to the Sonatype OSS Snapshot Repository.
-If you wish to use a snapshot version, you'll need to tell your build tool about this repository.
-
-[{tabs}]
-====
-Maven::
-+
---
-.`*pom.xml*`
-[source,xml]
-----
-<repositories>
-  <repository>
-    <id>sonatype-snapshots</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    <releases><enabled>false</enabled></releases>
-    <snapshots><enabled>true</enabled></snapshots>
-  </repository>
-</repositories>
-----
---
-Gradle (Kotlin)::
-+
---
-.`*build.gradle.kts*`
-[source,kotlin]
-----
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots")
-        mavenContent { snapshotsOnly() }
-    }
-}
-----
---
-Gradle (Groovy)::
-+
---
-.`*build.gradle*`
-[source,groovy]
-----
-repositories {
-    mavenCentral()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-        mavenContent { snapshotsOnly() }
-    }
-}
-----
---
-====
-
-[quickstart]
 == Connecting and Executing a Query
 
-[source,java]
+=== CommonJS
+
+[source,javascript]
 ----
-import com.couchbase.columnar.client.java.Cluster;
-import com.couchbase.columnar.client.java.Credential;
-import com.couchbase.columnar.client.java.QueryResult;
-import com.couchbase.columnar.client.java.internal.Certificates;
+const columnar = require('couchbase-columnar')
 
-import java.util.List;
+async function main() {
+  // Update this to your cluster
+  const clusterConnStr = 'couchbases://--your-instance--'
+  const username = 'username'
+  const password = 'Password123!'
+  // User Input ends here.
 
-public class Example {
-  public static void main(String[] args) {
-    var connectionString = "couchbases://...";
-    var username = "...";
-    var password = "...";
+  const credential = new columnar.Credential(username, password)
+  const cluster = columnar.createInstance(clusterConnStr, credential, {
+    securityOptions: {
+      trustOnlyCertificates: columnar.Certificates.getNonprodCertificates(),
+    },
+  })
 
-    try (Cluster cluster = Cluster.newInstance(
-      connectionString,
-      Credential.of(username, password),
-      clusterOptions -> clusterOptions
-        // Configure a secure connection to a Couchbase internal pre-production cluster.
-        // (Omit this when connecting to a production cluster!)
-        .security(it -> it.trustOnlyCertificates(Certificates.getNonProdCertificates()))
-    )) {
-
-      // Execute a query and buffer all result rows in client memory.
-      QueryResult result = cluster.executeQuery("select 1");
-      result.rows().forEach(row -> System.out.println("Got row: " + row));
-
-      // Execute a query and process rows as they arrive from server.
-      cluster.executeStreamingQuery(
-          "select 1",
-          row -> System.out.println("Got row: " + row)
-      );
-
-      // Execute a streaming query with positional arguments.
-      cluster.executeStreamingQuery(
-        "select ?=1",
-        row -> System.out.println("Got row: " + row),
-        options -> options
-          .parameters(List.of(1))
-      );
-
-      // Execute a streaming query with named arguments.
-      cluster.executeStreamingQuery(
-        "select $foo=1",
-        row -> System.out.println("Got row: " + row),
-        options -> options
-          .parameters(Map.of("foo", 1))
-      );
-    }
+  // Execute a streaming query with positional arguments.
+  let qs = 'SELECT * FROM `travel-sample`.inventory.airline LIMIT 10;'
+  let res = await cluster.executeQuery(qs)
+  for await (let row of res.rows()) {
+    console.log('Found row: ', row)
   }
+  console.log('Metadata: ', res.metadata())
+
+  // Execute a streaming query with positional arguments.
+  qs =
+    'SELECT * FROM `travel-sample`.inventory.airline WHERE country=$1 LIMIT $2;'
+  res = await cluster.executeQuery(qs, { parameters: ['United States', 10] })
+  for await (let row of res.rows()) {
+    console.log('Found row: ', row)
+  }
+  console.log('Metadata: ', res.metadata())
+
+  // Execute a streaming query with named parameters.
+  qs =
+    'SELECT * FROM `travel-sample`.inventory.airline WHERE country=$country LIMIT $limit;'
+  res = await cluster.executeQuery(qs, {
+    parameters: { country: 'United States', limit: 10 },
+  })
+  for await (let row of res.rows()) {
+    console.log('Found row: ', row)
+  }
+  console.log('Metadata: ', res.metadata())
 }
+
+main()
+  .then(() => {
+    console.log('Finished.  Exiting app...')
+  })
+  .catch((err) => {
+    console.log('ERR: ', err)
+    console.log('Exiting app...')
+    process.exit(1)
+  })
+----
+
+=== ES Modules
+
+[source,javascript]
+----
+import { Certificates, Credential, createInstance } from "couchbase-columnar"
+
+async function main() {
+  // Update this to your cluster
+  const clusterConnStr = 'couchbases://--your-instance--'
+  const username = 'username'
+  const password = 'Password123!'
+  // User Input ends here.
+
+  const credential = new Credential(username, password)
+  const cluster = createInstance(clusterConnStr, credential, {
+    securityOptions: {
+      trustOnlyCertificates: Certificates.getNonprodCertificates(),
+    },
+  })
+
+  // Execute a streaming query with positional arguments.
+  let qs = "SELECT * FROM `travel-sample`.inventory.airline LIMIT 10;"
+  let res = await cluster.executeQuery(qs)
+  for await (let row of res.rows()) {
+    console.log("Found row: ", row)
+  }
+  console.log("Metadata: ", res.metadata())
+
+  // Execute a streaming query with positional arguments.
+  qs =
+    "SELECT * FROM `travel-sample`.inventory.airline WHERE country=$1 LIMIT $2;"
+  res = await cluster.executeQuery(qs, { parameters: ["United States", 10] })
+  for await (let row of res.rows()) {
+    console.log("Found row: ", row)
+  }
+  console.log("Metadata: ", res.metadata())
+
+  // Execute a streaming query with named parameters.
+  qs =
+    "SELECT * FROM `travel-sample`.inventory.airline WHERE country=$country LIMIT $limit;"
+  res = await cluster.executeQuery(qs, {
+    parameters: { country: "United States", limit: 10 },
+  })
+  for await (let row of res.rows()) {
+    console.log("Found row: ", row)
+  }
+  console.log("Metadata: ", res.metadata())
+}
+
+main()
+  .then(() => {
+    console.log("Finished.  Exiting app...")
+  })
+  .catch((err) => {
+    console.log("ERR: ", err)
+    console.log("Exiting app...")
+    process.exit(1)
+  })
 ----
