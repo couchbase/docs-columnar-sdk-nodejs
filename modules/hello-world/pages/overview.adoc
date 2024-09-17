@@ -1,10 +1,13 @@
 = Hello Columnar -- Node.js Columnar SDK
 
+IMPORTANT: This page covers the pre-relase columnar SDK, for the internal preview, and remains applicable (internally) until the SDKs GA in October.
+The other pages appearing in the left-hand nav are part of docs development towards GA, and may not be accurate until GA.
+
 == Getting the SDK
 
 Eventually the SDK will be published to npm, but in the interim a select set of packages with prebuilt binaries are available on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page].
 If a packages is not available for your specific platform,
-see the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
+See the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
 
 To install the SDK from a package on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page]:
 
