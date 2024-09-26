@@ -1,7 +1,6 @@
 = Compatibility
 :description: Platform compatibility, and features available in different SDK versions, and compatibility between Server and SDK. \
 Plus notes on Cloud, networks, and AWS Lambda.
-:page-aliases: ROOT:overview,ROOT:compatibility-versions-features,compatibility-versions-features
 :page-toclevels: 3
 :table-caption!:
 
@@ -10,26 +9,25 @@ Plus notes on Cloud, networks, and AWS Lambda.
 {description}
 
 
-The {sdk_dot_minor} {name-sdk} requires Java 17 or later to be installed.
-We recommend using the most recent long-term support (LTS) version of OpenJDK.
 
-TIP: Remember to keep your Java installation up to date with the latest patches.
 
 
 == Platform Compatibility
 
 
-=== JDK Version Compatibility
+=== Node.js Version Compatibility
 
-include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=jdk-version]
-
-
+The {sdk_dot_minor} Node.js SDK will run on recent LTS versions of Node.js: 20 and 22.
+We recommend using the most recent long-term support (LTS) version of Node.js -- 
+at the time of writing (October 2024) this is version 22.
+ 
+TIP: Remember to keep your Node.js installation up to date, via `npm`.
 
 
 
 === OS Compatibility
 
-include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=os-compat-jvm]
+include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=os-compat]
 
 
 
@@ -73,7 +71,7 @@ include::{sdk_api}@columnar-sdk:shared:partial$compatibility.adoc[tag=api-versio
 
 === Interface Stability
 
-include::{version-common}@sdk:shared:partial$interface-stability-pars.adoc[tag=interface-stability-section]
+include::{version-common}@columnar-sdk:shared:partial$interface-stability-pars.adoc[tag=interface-stability-section]
 
 
 
@@ -82,7 +80,7 @@ include::{version-common}@sdk:shared:partial$interface-stability-pars.adoc[tag=i
 ////
 === Older SDK Versions
 
-include::{version-common}@sdk:shared:partial$archive.adoc[tag=link]
+include::{version-common}@columnar-sdk:shared:partial$archive.adoc[tag=link]
 ////
 
 ////

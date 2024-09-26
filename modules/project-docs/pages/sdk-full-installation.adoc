@@ -12,117 +12,26 @@
 
 == Before You Start
 
-You will need Java 17 or later.
-We recommend using the most recent long-term support (LTS) version of OpenJDK.
-
-TIP: Remember to keep your Java installation up to date with the latest patches.
+The {sdk_dot_minor} Node.js SDK will run on recent LTS versions of Node.js: 20 and 22.
+We recommend using the most recent long-term support (LTS) version of Node.js -- 
+at the time of writing (October 2024) this is version 22.
 
 
 == Getting the SDK
 
 
-Couchbase publishes all stable artifacts to https://central.sonatype.com/namespace/com.couchbase.client[Maven Central].
+Eventually the SDK will be published to npm, but in the interim a select set of packages with prebuilt binaries are available on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page].
+If a packages is not available for your specific platform,
+See the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page] for details on how to build the SDK's binary.
 
-Use your favorite dependency management tool to include the SDK in your project:
+To install the SDK from a package on the https://github.com/couchbaselabs/columnar-nodejs-client/releases[GitHub Releases page]:
 
-[{tabs}]
-====
-Maven::
-+
---
-For https://maven.apache.org[Maven], add this to the `dependencies` section of your project's `pom.xml` file:
+. Download the appropriate package
+. Unzip the downloaded file
+. Install via npm: `npm install <path to unzipped wheel>`
 
-[source,xml,subs="attributes+"]
-----
-<dependency>
-    <groupId>com.couchbase.client</groupId>
-    <artifactId>couchbase-columnar-java-client</artifactId>
-    <version>{sdk_current_version}</version>
-</dependency>
-----
-Refer to the https://maven.apache.org/guides/introduction/introduction-to-the-pom.html/[Maven Documentation] for more information regarding the structure of the `pom.xml` file.
---
-Gradle (Kotlin)::
-+
---
-For a https://gradle.org/[Gradle] script written in Kotlin, add this line to the `dependencies` section of your project's `build.gradle.kts` file:
+If a compatible package is not available, the SDK's binary will need to be built from source:
 
-[source,kotlin,subs="attributes+"]
-----
-implementation("com.couchbase.client:couchbase-columnar-java-client:{sdk_current_version}")
-----
---
-Gradle (Groovy)::
-+
---
-For a https://gradle.org/[Gradle] script written in Groovy, add this line to the `dependencies` section of your project's `build.gradle` file:
+* Follow the steps on the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page].
+* After the build succeeds, the SDK can be used by running Node scripts from within the cloned repository -- or the SDK can be installed via `npm`: `npm install <path to cloned repository>`.
 
-[source,groovy,subs="attributes+"]
-----
-implementation 'com.couchbase.client:couchbase-columnar-java-client:{sdk_current_version}'
-----
---
-====
-
-
-[maven-project-template]
-=== Maven Project Template
-
-The SDK's source code repository includes an https://github.com/couchbase/couchbase-jvm-clients/tree/master/columnar-java-client/examples[example Maven project] you can copy to get started quickly.
-
-
-[snapshots]
-== Using a Snapshot Version
-
-Couchbase publishes pre-release snapshot artifacts to the Sonatype OSS Snapshot Repository.
-If you wish to use a snapshot version, you'll need to tell your build tool about this repository.
-
-[{tabs}]
-====
-Maven::
-+
---
-.`*pom.xml*`
-[source,xml]
-----
-<repositories>
-  <repository>
-    <id>sonatype-snapshots</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    <releases><enabled>false</enabled></releases>
-    <snapshots><enabled>true</enabled></snapshots>
-  </repository>
-</repositories>
-----
---
-Gradle (Kotlin)::
-+
---
-.`*build.gradle.kts*`
-[source,kotlin]
-----
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots")
-        mavenContent { snapshotsOnly() }
-    }
-}
-----
---
-Gradle (Groovy)::
-+
---
-.`*build.gradle*`
-[source,groovy]
-----
-repositories {
-    mavenCentral()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-        mavenContent { snapshotsOnly() }
-    }
-}
-----
---
-====

@@ -18,7 +18,7 @@ To install the SDK from a package on the https://github.com/couchbaselabs/column
 If a compatible package is not available, the SDK's binary will need to be built from source:
 
 * Follow the steps on the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/BUILDING.md[GitHub Building page].
-* After the build succeeds, the SDK can be used by running Node scripts from within the cloned repository -- or the SDK can be installed via pip: `npm install <path to cloned repository>`.
+* After the build succeeds, the SDK can be used by running Node scripts from within the cloned repository -- or the SDK can be installed via `npm`: `npm install <path to cloned repository>`.
 
 
 == Connecting and Executing a Query

@@ -1,0 +1,1 @@
+include::{version-common}@columnar-sdk:pages:partial$troubleshooting-cloud-connections.adoc[]

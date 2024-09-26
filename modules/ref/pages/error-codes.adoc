@@ -1,5 +1,5 @@
 = Error Messages
-:description: The standardized error codes returned by the Columnar Java SDK, from Capella connection to {sqlpp} query.
+:description: The standardized error codes returned by the Columnar Node.js SDK, from Capella connection to {sqlpp} query.
 :nav-title: Error Codes
 
 [abstract]
@@ -7,5 +7,11 @@
 
 // include::{version-common}@sdk:shared:partial$error-ref.adoc[tag=intro]
 
-include::{version-common}@columnar-sdk:shared:partial$error-ref.adoc[tag=intro]
+// include::{version-common}@columnar-sdk:shared:partial$error-ref.adoc[tag=intro]
 
+
+
+
+The {name-sdk} passes through the Analytics error codes from Columnar.
+
+For a full list of error codes, see xref:{version-server}@server:analytics:error-codes.adoc[Analytics Error Codes].

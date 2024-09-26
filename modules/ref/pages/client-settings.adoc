@@ -1,5 +1,6 @@
 = Client Settings
-:description: pass:q[The `ClusterEnvironment` class enables you to configure Columnar Java SDK options for security, timeouts, reliability, and performance.]
+:description: Most settings can be changed through the connection string.
+// :description: pass:q[The `ClusterEnvironment` class enables you to configure Columnar Java SDK options for security, timeouts, reliability, and performance.]
 :page-toclevels: 2
 
 
@@ -8,3 +9,5 @@
 
 
 // connstr?
+
+*TODO -- most common options*

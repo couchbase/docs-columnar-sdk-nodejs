@@ -17,5 +17,5 @@ asciidoc:
     name_platform: 'Node.js'
     name-sdk: 'Node.js Columnar SDK'
     sdk_api: '1.0'
-    sdk-api-link: 
-    sdk-gh-link: 
+    sdk-api-link: https://docs.couchbase.com/sdk-api/columnar-nodejs-client
+    sdk-gh-link: https://github.com/couchbaselabs/columnar-nodejs-client/tree/main

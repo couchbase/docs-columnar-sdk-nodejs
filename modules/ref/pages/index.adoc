@@ -1,6 +1,5 @@
 = Reference Pages
 :page-toclevels: 2
-:sdk-api-link: #
 :description: Essential reference infomation for developing with Columnar.
 
 

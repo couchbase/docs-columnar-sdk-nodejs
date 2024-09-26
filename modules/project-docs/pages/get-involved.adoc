@@ -5,8 +5,8 @@ include::project-docs:partial$attributes.adoc[]
 
 == Contributing
 
-Couchbase welcomes community contributions to the Java SDK.
-The https://github.com/couchbase/couchbase-jvm-clients[Java SDK source code^] is available on GitHub.
-Please see the https://github.com/couchbase/couchbase-jvm-clients/blob/master/CONTRIBUTING.md[CONTRIBUTING^] file for further information.
+Couchbase welcomes community contributions to the Node.js SDK.
+The https://github.com/couchbaselabs/columnar-nodejs-client[Node.js SDK source code^] is available on GitHub.
+Please see the https://github.com/couchbaselabs/columnar-nodejs-client/blob/main/CONTRIBUTING.md[CONTRIBUTING^] file for further information.
 
-include::{version-common}@sdk:shared:partial$contrib.adoc[tag=contrib]
+include::{version-common}@columnar-sdk:shared:partial$contrib.adoc[tag=contrib]
