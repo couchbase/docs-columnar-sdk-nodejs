@@ -26,7 +26,6 @@ A connection to a Columnar cluster is represented by a `columnar` object.
 // A `Cluster` provides access to databases, scopes, and collections, as well as various Columnar services and management interfaces.
 Connect to Columnar by calling `columnar.createInstance` with the connection string, credentials, and any required optional parameters.
 
---
 [source,javascript]
 ----
 const columnar = require('couchbase-columnar')

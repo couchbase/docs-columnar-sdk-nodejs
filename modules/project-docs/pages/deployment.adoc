@@ -47,30 +47,12 @@ The best way to accommodate developing an application that is to be deployed to 
 
 
 
-
-// == Migration
-// 
-// This section also contains information on xref:migrating-sdk-code-to-3.n.adoc[migrating from the previous version of the SDK API].
-// 
-// :migration-link: for 4.x pages??
-
-
+////
 == Further Reading
 
 * Integrate Couchbase with your data ecosystem:
 ** xref:project-docs:third-party-integrations.adoc[SDK Integrations]
 ** xref:server:develop:integrations.adoc[Integrations across Couchbase]
 * xref:project-docs:get-involved.adoc[Contribute to the SDK] 
+////
 
-=== Deploying Couchbase Server
-
-* xref:cloud::index.adoc[Capella] -- Database as a Service
-* xref:{version-server}@server:install:get-started.adoc[Self-managed Couchbase Server]:
-** xref:{version-server}@server:install:getting-started-docker.adoc[Docker Install]
-** xref:operator::overview.adoc[Couchbase Autonomous Operator]
-*** xref:operator::install-kubernetes.adoc[Kubernetes]
-*** xref:operator::install-openshift.adoc[Openshift]
-** xref:{version-server}server:cloud:couchbase-cloud-deployment.adoc[Cloud Marketplace]:
-*** xref:{version-server}@server:cloud:couchbase-aws-marketplace.adoc[AWS Marketplace]
-*** xref:{version-server}@server:cloud:couchbase-azure-marketplace.adoc[Azure Marketplace]
-*** xref:{version-server}@server:cloud:couchbase-gcp-cloud-launcher.adoc[GCP Marketplace]
