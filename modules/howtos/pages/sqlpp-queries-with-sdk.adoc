@@ -47,6 +47,18 @@ include::{example-source}[indent=0,tag=sqlpp_scope_query]
 include::{example-source}[indent=0,tag=sqlpp_cluster_query]
 ----
 
+=== Positional Parameters
+[source,{example-source-lang}]
+----
+include::{example-source}[indent=0,tag=sqlpp_positional_parameters_query]
+----
+
+=== Named Parameters
+[source,{example-source-lang}]
+----
+include::{example-source}[indent=0,tag=sqlpp_named_parameters_query]
+----
+
 
 
 == Further Information

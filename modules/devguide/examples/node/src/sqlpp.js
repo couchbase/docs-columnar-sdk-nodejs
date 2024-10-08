@@ -20,22 +20,18 @@ async function main() {
         `
         SELECT airline, COUNT(*) AS route_count, AVG(route.distance) AS avg_route_distance
         FROM route
-        WHERE sourceairport = $sourceAirport AND distance >= $1
         GROUP BY airline
         ORDER BY route_count DESC
         `
 
-    let res = await scope.executeQuery(qs, {
-        positionalParameters: [1000],
-        namedParameters: {sourceAirport: 'SFO'}
-    })
+    let res = await scope.executeQuery(qs)
 
     for await (let row of res.rows()) {
         console.log(row)
     }
 
     console.log('Metadata: ', res.metadata())
-    // #end::sqlpp_scope_query[]
+//     // #end::sqlpp_scope_query[]
 }
 {
     // #tag::sqlpp_cluster_query[]
@@ -43,22 +39,49 @@ async function main() {
         `
         SELECT r.airline, COUNT(*) AS route_count, AVG(r.distance) AS avg_route_distance
         FROM \`travel-sample\`.\`inventory\`.\`route\` AS r
-        WHERE r.sourceairport = $sourceAirport AND r.distance >= $1
         GROUP BY r.airline
         ORDER BY route_count DESC
         `
 
-    let res = await cluster.executeQuery(qs, {
-        positionalParameters: [1000],
-        namedParameters: {sourceAirport: 'SFO'}
+    let res = await cluster.executeQuery(qs)
+//     // #end::sqlpp_cluster_query[]
+}
+{
+    // #tag::sqlpp_positional_parameters_query[]
+    const scope = cluster.database('travel-sample').scope('inventory')
+
+    let qs =
+        `
+        SELECT airline, COUNT(*) AS route_count, AVG(route.distance) AS avg_route_distance
+        FROM route
+        WHERE sourceairport = $1 AND distance >= $2
+        GROUP BY airline
+        ORDER BY route_count DESC
+        `
+
+    let res = await scope.executeQuery(qs, {
+        positionalParameters: ['SFO', 1000],
     })
+    // #end::sqlpp_positional_parameters_query[]
+}
 
-    for await (let row of res.rows()) {
-        console.log(row)
-    }
+{
+    // #tag::sqlpp_named_parameters_query[]
+    const scope = cluster.database('travel-sample').scope('inventory')
 
-    console.log('Metadata: ', res.metadata())
-    // #end::sqlpp_cluster_query[]
+    let qs =
+        `
+        SELECT airline, COUNT(*) AS route_count, AVG(route.distance) AS avg_route_distance
+        FROM route
+        WHERE sourceairport = $sourceAirport AND distance >= $distance
+        GROUP BY airline
+        ORDER BY route_count DESC
+        `
+
+    let res = await scope.executeQuery(qs, {
+        namedParameters: {sourceAirport: 'SFO', distance: 1000}
+    })
+    // #end::sqlpp_named_parameters_query[]
 }
 }
 
