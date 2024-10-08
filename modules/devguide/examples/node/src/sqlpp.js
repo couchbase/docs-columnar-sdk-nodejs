@@ -1,6 +1,5 @@
 const columnar = require('couchbase-columnar')
 
-
 async function main() {
     const clusterConnStr = 'couchbases://--your-instance--'
     const username = 'username'
@@ -60,10 +59,7 @@ async function main() {
 
     console.log('Metadata: ', res.metadata())
     // #end::sqlpp_cluster_query[]
-
 }
-
-
 }
 
 main()
@@ -71,4 +67,5 @@ main()
         console.log('ERR:', err)
         process.exit(1)
     })
-    .then(process.exit)
+    .then(
+        process.exit)
