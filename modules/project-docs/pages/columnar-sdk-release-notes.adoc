@@ -1,5 +1,5 @@
 = Columnar SDK Release Notes
-:description: Release notes, brief installation instructions, and download archive for the Capella Columnar Java Client.
+:description: Release notes, brief installation instructions, and download archive for the Capella Columnar Node.js Client.
 :navtitle: Release Notes
 :page-toclevels: 2
 :page-aliases: sdk-release-notes.adoc
