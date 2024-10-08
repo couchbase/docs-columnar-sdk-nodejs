@@ -1,4 +1,7 @@
 = Querying with {sqlpp}
+:lang: javascript
+:example-source: devguide:example$node/src/sqlpp.js
+:example-source-lang: javascript
 :description: You can query for documents in Couchbase using the {sqlpp} query language, a language based on SQL, but designed for structured and flexible JSON documents.
 // :page-aliases: n1ql-query.adoc,n1ql-queries-with-sdk.adoc
 // :page-aliases: ROOT:document-operations.adoc,ROOT:documents-creating,ROOT:documents-updating,ROOT:documents-retrieving,ROOT:documents-deleting,n1ql-queries-with-sdk.adoc
@@ -32,8 +35,17 @@ Create a collection to work upon by xref:columnar:intro:examples.adoc#travel-sam
 
 == Querying Your Dataset
 
+=== Scope Level
+[source,{example-source-lang}]
+----
+include::{example-source}[indent=0,tag=sqlpp_scope_query]
+----
 
-*TODO -- add code samples.*
+=== Cluster Level
+[source,{example-source-lang}]
+----
+include::{example-source}[indent=0,tag=sqlpp_cluster_query]
+----
 
 
 

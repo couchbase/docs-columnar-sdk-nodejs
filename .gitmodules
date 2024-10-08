@@ -1,0 +1,3 @@
+[submodule "modules/devguide/examples/node/deps/columnar-nodejs-client"]
+	path = modules/devguide/examples/node/deps/columnar-nodejs-client
+	url = https://github.com/couchbaselabs/columnar-nodejs-client
