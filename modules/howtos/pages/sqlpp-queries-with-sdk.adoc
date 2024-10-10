@@ -32,25 +32,36 @@ Create a collection to work upon by xref:columnar:intro:examples.adoc#travel-sam
 
 == Querying Your Dataset
 
-=== Scope Level
+Most queries return more than one result, and you want to iterate over the results:
+
+.Scope Level
 [source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_scope_query]
 ----
 
-=== Cluster Level
+.Cluster Level
 [source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_cluster_query]
 ----
 
-=== Positional Parameters
+
+=== Positional and Named Parameters
+
+Supplying parameters as individual arguments to the query allows the query engine to optimize the parsing and planning of the query. You can either supply these parameters by name or by position.
+
+Execute an async query with positional arguments:
+
+.Positional Parameters
 [source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_positional_parameters_query]
 ----
 
-=== Named Parameters
+Execute an async query with named arguments:
+
+.Named Parameters
 [source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_named_parameters_query]
