@@ -50,7 +50,7 @@ How-to guides and tutorials to help you start your development journey with Colu
 
 == icon:graduation-cap[] Learn
 
-Take a deep-dive into the SDK concept material and learn more about Couchbase.
+Take a deep-dive into the SDK concept material and learn more about Couchbase and Columnar.
 
 ++++
 <div class="card-row three-column-row">
