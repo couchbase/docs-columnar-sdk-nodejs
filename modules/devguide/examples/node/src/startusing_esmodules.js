@@ -9,11 +9,7 @@ async function main() {
     // User Input ends here.
 
     const credential = new Credential(username, password)
-    const cluster = createInstance(clusterConnStr, credential, {
-        securityOptions: {
-            disableServerCertificateVerification: true, // Should not use this in production
-        },
-    })
+    const cluster = createInstance(clusterConnStr, credential)
 
     // Execute a streaming query with positional arguments.
     let qs = "SELECT * FROM `travel-sample`.inventory.airline LIMIT 10;"
