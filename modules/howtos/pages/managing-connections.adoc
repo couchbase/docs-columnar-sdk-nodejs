@@ -1,5 +1,5 @@
 = Managing Connections
-:description: This section describes how to connect the {name-sdk} to a Couchbase cluster.
+:description: This section describes how to connect the {name-sdk} to a Columnar cluster.
 :page-toclevels: 2
 
 
@@ -42,14 +42,9 @@ async function main() {
 ----
 
 
-The client certificate for connecting to a Capella Columnar instance is included in the SDK installation.
 
-NOTE: Capella's root certificate is *not* signed by a well known CA (Certificate Authority).
-However, as the certificate is bundled with the SDK, it is trusted by default.
-
-
-
-
+NOTE: Capella's root certificate is *not* signed by a well known Certificate Authority.
+However, the certificate is bundled with the SDK, and is automatically trusted unless you specify a different certificate to trust.
 
 
 === Connection Strings
