@@ -68,7 +68,7 @@ for which the `couchbases://` schema is used as the root of the connection strin
 
 .Simple connection string with one seed node
 ----
-cb.<your-endpoint>.cloud.couchbase.com
+couchbases://cb.<your-endpoint>.cloud.couchbase.com
 ----
 
 ////
@@ -87,7 +87,7 @@ The client fetches the full address list from the first node it is able to conta
 
 .Connection string with two parameters
 ----
-cb.<your-endpoint>.cloud.couchbase.com?io.networkResolution=external&timeout.kvTimeout=10s
+couchbases://cb.<your-endpoint>.cloud.couchbase.com?io.networkResolution=external&timeout.kvTimeout=10s
 ----
 
 The full list of recognized parameters is documented in the xref:ref:client-settings.adoc[client settings reference].

@@ -7,7 +7,11 @@
 [abstract]
 {description}
 
+Settings are changed by adding them to the connection string, as in the following example:
 
-// connstr?
+.Connection string with two parameters
+----
+couchbases://cb.<your-endpoint>.cloud.couchbase.com?io.networkResolution=external&timeout.kvTimeout=10s
+----
 
-*TODO -- most common options*
+// TODO add complete listings

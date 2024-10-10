@@ -1,8 +1,6 @@
 = Querying with {sqlpp}
 :page-toclevels: 2
-:lang: javascript
 :example-source: devguide:example$node/src/sqlpp.js
-:example-source-lang: javascript
 :description: You can query for documents in Couchbase using the {sqlpp} query language, a language based on SQL, but designed for structured and flexible JSON documents.
 
 
@@ -35,25 +33,25 @@ Create a collection to work upon by xref:columnar:intro:examples.adoc#travel-sam
 == Querying Your Dataset
 
 === Scope Level
-[source,{example-source-lang}]
+[source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_scope_query]
 ----
 
 === Cluster Level
-[source,{example-source-lang}]
+[source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_cluster_query]
 ----
 
 === Positional Parameters
-[source,{example-source-lang}]
+[source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_positional_parameters_query]
 ----
 
 === Named Parameters
-[source,{example-source-lang}]
+[source,javascript]
 ----
 include::{example-source}[indent=0,tag=sqlpp_named_parameters_query]
 ----
@@ -63,7 +61,7 @@ include::{example-source}[indent=0,tag=sqlpp_named_parameters_query]
 == Further Information
 
 
-
-
+The xref:server:analytics:1_intro.adoc[{sqlpp} for Analytics Reference]
+offers a complete guide to the SQL++ language for both of our analytics services, including all of the latest additions.
 
 

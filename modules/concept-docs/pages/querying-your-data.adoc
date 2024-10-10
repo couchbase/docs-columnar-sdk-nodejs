@@ -1,6 +1,5 @@
 = Querying Your Data 
 :page-toclevels: 2
-:page-aliases: data-services.adoc,choosing-the-right-service.adoc,http-services.adoc
 :description: Querying Capella Columnar from the {name_platform} SDK, with {sqlpp}.
 
 
@@ -27,4 +26,13 @@ Capella Columnar eliminates these ETL complexities by unifying operational and a
 This enables Zero ETL, reducing costs, complexity, and improving time to insight.
 
 
-*TODO -- more info.*
+Dive right in with our xref:howtos:sqlpp-queries-with-sdk.adoc[practical examples].
+
+
+
+
+
+// Parameterized queries
+
+
+// include::{version-common}@columnar-sdk:pages:partial$sqlpp.adoc[tag=options]
