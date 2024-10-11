@@ -33,4 +33,8 @@ This is the first General Availability (GA) release of the new Couchbase Columna
 It supports executing queries against Capella Columnar clusters, with additional features planned for future releases.
 
 https://docs.couchbase.com/sdk-api/columnar-nodejs-client-1.0.0[API Reference^]
+
+==== Known Issues
+
+* https://jira.issues.couchbase.com/browse/JSCO-36[JSCO-36]: Logging hooks are not yet implemented.
 // end::all[]
