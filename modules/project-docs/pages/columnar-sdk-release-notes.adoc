@@ -27,12 +27,10 @@ All patch releases for each dot minor release should be API compatible, and safe
 any changes to expected behavior are noted in the release notes that follow.
 
 
-=== Version 1.0.0 (10 October 2024)
+=== Version 1.0.0 (11 October 2024)
 
-First GA release of the Node.js columnar SDK.
+This is the first General Availability (GA) release of the new Couchbase Columnar Node.js SDK.
+It supports executing queries against Capella Columnar clusters, with additional features planned for future releases.
 
-
-https://docs.couchbase.com/sdk-api/columnar-nodejs-client[API Reference^]
-
-
+https://docs.couchbase.com/sdk-api/columnar-nodejs-client-1.0.0[API Reference^]
 // end::all[]
