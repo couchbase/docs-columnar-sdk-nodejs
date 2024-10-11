@@ -48,10 +48,7 @@ include::{sdk_api}@columnar-sdk:shared:partial$network-requirements.adoc[tag=lan
 Capella Columnar is a fully hosted service, continually updated, and offering the latest version --
 with users having a few weeks to upgrade from the previous version.
 As such, the latest Couchbase Columnar SDKs are tested against the latest versions.
-Where older versions of the {name-sdk} pre-date significant new features in Columar, those differences will be noted in this section.
-
-
-To make development easier, the SDK includes the Capella client certificate ready installed.
+Where older versions of the {name-sdk} pre-date significant new features in Columnar, those differences will be noted in this section.
 
 
 
