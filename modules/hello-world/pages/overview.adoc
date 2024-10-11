@@ -16,7 +16,7 @@ see our xref:nodejs-sdk:hello-world:overview.adoc[Node.js Server SDK].
 
 {empty} +
 
-== icon:database[] Using Your Database
+== icon:database[] Using Your Columnar Cluster
 
 How-to guides and tutorials to help you start your development journey with Columnar and the Node.js SDK.
 
