@@ -11,7 +11,7 @@
 
 == Before You Start
 
-Sign up for a xref:cloud:get-started:create-account.adoc#sign-up-free-trial[Capella Free Trial],
+Sign up for a xref:cloud:get-started:create-account.adoc[Capella Free Tier],
 and choose a xref:columnar:intro:intro.adoc[Columnar] cluster.
 
 You'll need to add your IP address to the allowlist, during the sign-up and cluster creation process (this can also be done at any time, via the UI, should the address change, or if you need to add a new one).
