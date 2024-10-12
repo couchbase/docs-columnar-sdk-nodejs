@@ -13,7 +13,7 @@
 
 == Before You Start
 
-Sign up for a xref:cloud:get-started:create-account.adoc#sign-up-free-trial[Capella Free Trial],
+Sign up for a xref:cloud:get-started:create-account.adoc[Capella Free Tier],
 and choose a xref:columnar:intro:intro.adoc[Columnar] cluster.
 
 === Prerequisites
