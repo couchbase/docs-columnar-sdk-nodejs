@@ -9,7 +9,7 @@
 
 
 
-The Columnar Node.js SDK allows you to connect to a Capella Columnar cluster from Node.js.
+The Columnar Node.js SDK allows you to connect to a xref:columnar:intro:intro.adoc[Capella Columnar] cluster from Node.js.
 For connecting to a Couchbase Server Cluster -- self-managed, or Capella Operational --
 see our xref:nodejs-sdk:hello-world:overview.adoc[Node.js Server SDK].
 
