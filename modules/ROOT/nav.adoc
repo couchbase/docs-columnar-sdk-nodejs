@@ -2,7 +2,7 @@
 
 * xref:hello-world:start-using-sdk.adoc[Get Started]
 ** xref:howtos:managing-connections.adoc[Connecting to Columnar]
-*** xref:howtos:troubleshooting-connections.adoc[Troubleshooting Connections]
+// *** xref:howtos:troubleshooting-connections.adoc[Troubleshooting Connections]
 * xref:concept-docs:querying-your-data.adoc[]
 ** xref:howtos:sqlpp-queries-with-sdk.adoc[]
 * xref:project-docs:deployment.adoc[SDK Deployment]
