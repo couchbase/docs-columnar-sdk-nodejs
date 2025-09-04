@@ -13,7 +13,7 @@
 
 [abstract]
 {description}
-It contains best practices as well as information on TLS/SSL and advanced connection options, and a sub-page on troubleshooting Cloud connections.
+It contains best practices as well as information on TLS/SSL and advanced connection options.
 
 
 Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to a Capella Columnar cluster.
@@ -249,5 +249,3 @@ More details on connecting your client code to Couchbase Capella can be found xr
 
 Some DNS caching providers (notably, home routers) can’t handle an SRV record that’s large -- if you have DNS-SRV issues with such a set-up, reduce your DNS-SRV to only include three records.
 [_For development only, not production._]. 
-Our xref:troubleshooting-connections.adoc[Troubleshooting Connections] page will help you to diagnose this and other problems -- as well as introducing the SDK doctor tool.
-
