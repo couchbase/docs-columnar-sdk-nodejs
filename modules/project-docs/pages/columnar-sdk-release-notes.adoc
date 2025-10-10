@@ -27,6 +27,41 @@ All patch releases for each dot minor release should be API compatible, and safe
 any changes to expected behavior are noted in the release notes that follow.
 
 
+=== Version 1.0.1 (10 October 2025)
+
+Version 1.0.1 is the next patch release of the first generation Couchbase Columnar Node.js SDK, bringing a number of improvements.
+
+[source,bash]
+----
+$ npm install couchbase-columnar@1.0.1
+----
+
+*API Docs:* https://docs.couchbase.com/sdk-api/columnar-nodejs-client-1.0.1/
+
+==== Enhancements
+
+* https://jira.issues.couchbase.com/browse/JSCO-55[JSCO-55]:
+Added support for Node.js 22.
+
+* https://jira.issues.couchbase.com/browse/JSCO-56[JSCO-56]:
+Added support for Node.js 24.
+
+* https://jira.issues.couchbase.com/browse/JSCO-58[JSCO-58]:
+Added support for building binary with sanitzers.
+
+* https://jira.issues.couchbase.com/browse/JSCO-60[JSCO-60]:
+Updated SDK to more recent {cpp} core.
+
+==== Fixes
+
+* https://jira.issues.couchbase.com/browse/JSCO-61[JSCO-61]:
+The internal `OperationCanceledError` is no longer raised. Instead, `ColumnarError` is raised.
+
+==== Known Issues
+
+* https://jira.issues.couchbase.com/browse/JSCO-36[JSCO-36]: Logging hooks are not yet implemented.
+
+
 === Version 1.0.0 (11 October 2024)
 
 This is the first General Availability (GA) release of the new Couchbase Columnar Node.js SDK.
