@@ -47,6 +47,11 @@ The best way to accommodate developing an application that is to be deployed to 
 
 
 
+
+include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
+
+
+
 ////
 == Further Reading
 

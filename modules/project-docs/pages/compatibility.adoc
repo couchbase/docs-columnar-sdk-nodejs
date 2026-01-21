@@ -11,6 +11,9 @@ Plus notes on Cloud, networks, and AWS Lambda.
 
 
 
+include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
+
+
 
 == Platform Compatibility
 

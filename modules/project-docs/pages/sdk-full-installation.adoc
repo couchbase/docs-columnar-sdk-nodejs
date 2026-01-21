@@ -26,6 +26,11 @@ We recommend using the most recent long-term support (LTS) version of Node.js --
 at the time of writing (October 2024) this is version 22.
 
 
+
+include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
+
+
+
 == Getting the SDK
 
 

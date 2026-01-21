@@ -10,6 +10,9 @@
 include::columnar-sdk:shared:partial$start-using-sdk.adoc[tag=intro]
 
 
+include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
+
+
 == Before You Start
 
 Sign up for a xref:cloud:get-started:create-account.adoc[Capella account],

@@ -20,6 +20,9 @@ Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basic
 This page is a wider look at the topic.
 
 
+include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
+
+
 == Connecting to a Cluster
 
 A connection to a Columnar cluster is represented by a `columnar` object.

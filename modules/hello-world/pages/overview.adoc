@@ -14,6 +14,9 @@ For connecting to a Couchbase Server Cluster -- self-managed, or Capella Operati
 see our xref:nodejs-sdk:hello-world:overview.adoc[Node.js Server SDK].
 
 
+include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
+
+
 {empty} +
 
 == icon:database[] Using Your Columnar Cluster
