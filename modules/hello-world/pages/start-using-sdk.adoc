@@ -1,6 +1,6 @@
-= Hello Columnar -- Node.js SDK Quickstart Guide
+= Hello {oi-cloud-name} -- Node.js SDK Quickstart Guide
 :page-toclevels: 2
-:description: Install, connect, try. A quick start guide to get you up and running with Columnar and the {name-sdk}.
+:description: Install, connect, try. A quick start guide to get you up and running with {oi-cloud-name} and the {name-sdk}.
 
 [abstract]
 {description}
@@ -16,7 +16,7 @@ include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
 == Before You Start
 
 Sign up for a xref:cloud:get-started:create-account.adoc[Capella account],
-and choose a xref:columnar:intro:intro.adoc[Columnar] cluster.
+and choose an xref:columnar:intro:intro.adoc[{oi-cloud-name}] cluster.
 
 You'll need to add your IP address to the allowlist, during the sign-up and cluster creation process (this can also be done at any time, via the UI, should the address change, or if you need to add a new one).
 

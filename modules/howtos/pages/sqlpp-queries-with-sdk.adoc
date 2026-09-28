@@ -24,7 +24,7 @@ and give links to information on adding other collections to your data.
 
 == Before You Start
 
-This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], added your IP address to the allowlist, and xref:columnar:admin:prepare-project.adoc#cluster[created a Columnar cluster].
+This page assumes that you have xref:hello-world:start-using-sdk.adoc[installed the {name-sdk}], added your IP address to the allowlist, and xref:columnar:admin:prepare-project.adoc#cluster[created an {oi-cloud-name} cluster].
 
 Create a collection to work upon by xref:columnar:intro:examples.adoc#travel-sample[importing the travel-sample dataset] into your cluster.
 

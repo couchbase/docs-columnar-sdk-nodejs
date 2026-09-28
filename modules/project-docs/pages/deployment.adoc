@@ -19,7 +19,7 @@
 
 
 
-One of Couchbase's strengths is speedy response, so deployment of apps should be in the same region as your Capella Columnar cluster.
+One of Couchbase's strengths is speedy response, so deployment of apps should be in the same region as your {oi-cloud-name} cluster.
 
 We always recommend the xref::columnar-sdk-release-notes.adoc#latest-release[latest version] of the SDK. 
 This not only contains the latest security updates and bug fixes, but will be compatible with the latest Couchbase Server release -- Capella always runs a recent version of Couchbase Server.

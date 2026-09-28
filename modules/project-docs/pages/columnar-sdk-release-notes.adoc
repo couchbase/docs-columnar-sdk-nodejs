@@ -9,7 +9,7 @@
 {description}
 
 Version {sdk_dot_minor} of the Node.js Columnar SDK implements the {sdk_api} xref:compatibility.adoc#api-version[SDK API].
-See the xref:compatibility.html#couchbase-feature-availability-matrix[compatibility pages] for more information on feature compatibility with different versions of Capella columnar.
+See the xref:compatibility.html#couchbase-feature-availability-matrix[compatibility pages] for more information on feature compatibility with different versions of {oi-cloud-name}columnar.
 
 
 == Installation
@@ -65,7 +65,7 @@ The internal `OperationCanceledError` is no longer raised. Instead, `ColumnarErr
 === Version 1.0.0 (11 October 2024)
 
 This is the first General Availability (GA) release of the new Couchbase Columnar Node.js SDK.
-It supports executing queries against Capella Columnar clusters, with additional features planned for future releases.
+It supports executing queries against {oi-cloud-name} clusters, with additional features planned for future releases.
 
 https://docs.couchbase.com/sdk-api/columnar-nodejs-client-1.0.0[API Reference^]
 
