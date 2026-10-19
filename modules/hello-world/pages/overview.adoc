@@ -9,7 +9,7 @@
 
 
 
-The Columnar Node.js SDK allows you to connect to a xref:columnar:intro:intro.adoc[Capella Columnar] cluster from Node.js.
+The Columnar Node.js SDK allows you to connect to a xref:columnar:intro:intro.adoc[{oi-cloud-name}] cluster from Node.js.
 For connecting to a Couchbase Server Cluster -- self-managed, or Capella Operational --
 see our xref:nodejs-sdk:hello-world:overview.adoc[Node.js Server SDK].
 
@@ -21,7 +21,7 @@ include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
 
 == icon:database[] Using Your Columnar Cluster
 
-How-to guides and tutorials to help you start your development journey with Columnar and the Node.js SDK.
+How-to guides and tutorials to help you start your development journey with {oi-cloud-name} and the Node.js SDK.
 
 ++++
 <div class="card-row three-column-row">
@@ -30,7 +30,7 @@ How-to guides and tutorials to help you start your development journey with Colu
 [.column]
 .Getting Started
 * xref:hello-world:start-using-sdk.adoc[]
-* xref:howtos:managing-connections.adoc[Connecting to Columnar]
+* xref:howtos:managing-connections.adoc[Connecting to {oi-cloud-name}]
 * xref:howtos:sqlpp-queries-with-sdk.adoc[]
 
 ////

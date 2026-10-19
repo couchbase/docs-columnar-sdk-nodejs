@@ -12,6 +12,6 @@
 
 
 
-The {name-sdk} passes through the Analytics error codes from Columnar.
+The {name-sdk} passes through the Analytics error codes from {oi-cloud-name}.
 
 For a full list of error codes, see xref:{version-server}@server:analytics:error-codes.adoc[Analytics Error Codes].

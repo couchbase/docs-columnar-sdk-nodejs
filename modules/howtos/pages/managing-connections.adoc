@@ -1,5 +1,5 @@
 = Managing Connections
-:description: This section describes how to connect the {name-sdk} to a Columnar cluster.
+:description: This section describes how to connect the {name-sdk} to an {oi-cloud-name} Cluster.
 :page-toclevels: 2
 
 
@@ -16,7 +16,7 @@
 It contains best practices as well as information on TLS/SSL and advanced connection options.
 
 
-Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to a Capella Columnar cluster.
+Our xref:hello-world:start-using-sdk.adoc[Getting Started pages] cover the basics of making a connection to a {oi-cloud-name} cluster.
 This page is a wider look at the topic.
 
 
@@ -25,9 +25,9 @@ include::columnar-sdk:shared:partial$compatibility.adoc[tag=wrapper-no-mix]
 
 == Connecting to a Cluster
 
-A connection to a Columnar cluster is represented by a `columnar` object.
+A connection to an {oi-cloud-name} cluster is represented by a `columnar` object.
 // A `Cluster` provides access to databases, scopes, and collections, as well as various Columnar services and management interfaces.
-Connect to Columnar by calling `columnar.createInstance` with the connection string, credentials, and any required optional parameters.
+Connect to {oi-cloud-name} by calling `columnar.createInstance` with the connection string, credentials, and any required optional parameters.
 
 [source,javascript]
 ----

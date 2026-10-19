@@ -1,6 +1,6 @@
 = Reference Pages
 :page-toclevels: 2
-:description: Essential reference infomation for developing with Columnar.
+:description: Essential reference infomation for developing with {oi-cloud-name}.
 
 
 // Note to editors

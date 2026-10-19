@@ -14,7 +14,7 @@
 == Before You Start
 
 Sign up for a xref:cloud:get-started:create-account.adoc[Capella account],
-and choose a xref:columnar:intro:intro.adoc[Columnar] cluster.
+and choose a xref:columnar:intro:intro.adoc[{oi-cloud-name}] cluster.
 
 === Prerequisites
 
